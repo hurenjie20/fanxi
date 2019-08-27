@@ -1,0 +1,129 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.top {
+    height: 35px;
+    background-color: #F7F6F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.problem1 {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.sou {
+    height: 30px;
+    width: 80%;
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.suo {
+    display: inline-block;
+    width: 15%;
+    color: #D9001B;
+    text-align: center;
+    font-size: 19px;
+}
+
+.problem2 {
+    height: 60px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.btnn {
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 16px;
+    text-align: center;
+    background-color: #D7D7D7;
+    border: 1px solid #8A8A8A;
+
+}
+
+.problem3 {
+    height: 260px;
+    border: 1px solid #8A8A8A;
+    margin-bottom: 20px;
+}
+
+.problem3-a {
+    height: 40px;
+    line-height: 40px;
+    /* background-color: pink; */
+    padding-left: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.shuxian {
+    color: #D9001B;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.problem3-b {
+    /* background-color: red; */
+    padding: 0 20px;
+}
+
+.problem3-b li {
+    height: 29px;
+    line-height: 28px;
+    border-bottom: 1px solid #8A8A8A;
+    display: flex;
+    justify-content: space-between;
+}
+
+.problem3-b .oio {
+    border-bottom: 0;
+}
+
+.problem4 {
+    height: 180px;
+}

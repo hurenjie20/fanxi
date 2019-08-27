@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查看众筹</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+    <link rel="stylesheet" href="lib/chakan.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <a href="index.html" class="return">
+                <img src="img/x1.png">
+            </a>
+
+            <div>
+                <div class="text">生命地图游学|一年一度,梅里雪山</div>
+                <div>勇者徒步之旅,再次集结!</div>
+            </div>
+            <div class="diandian">
+                <img src="img/x4.png" alt="">
+            </div>
+        </div>
+        <div class="chakan1">
+            <div class="myVido">视频区域</div>
+        </div>
+        <div class="chakan2">
+            <div>我的众筹</div>
+            <div>
+                剩余<span class="hong"> 6 </span>天
+            </div>
+        </div>
+        <div class="chakan3">
+            <div class="aaa">
+                <img src="img/fengmian.png" alt="">
+            </div>
+            <div class="bbb">
+                <div>生命地图游学|一年一度，梅里雪山</div>
+                <div>勇者徒步之旅，再次集结！</div>
+                <div class="juli2">2019.09.29-10.02</div>
+                <div class="hong">9800元</div>
+            </div>
+        </div>
+        <div class="chakan4">2019.10.25发起</div>
+        <div class="chakan5">
+            <div class="chakan5-a">
+                <div class="juli3">13999</div>
+                <div>还差金额（元）</div>
+            </div>
+            <div class="chakan5-b">
+                <div class="juli3">0</div>
+                <div>已筹金额（元）</div>
+            </div>
+            <div class="chakan5-c">
+                <div class="juli3">0</div>
+                <div>支持人数（人）</div>
+            </div>
+        </div>
+        <div class="chakan6">
+            <span>所属队伍：</span>
+            <span>官方战队（22人）</span>
+        </div>
+        <div class="chakan7">
+            <div class="chakan7-a">
+                <img src="img/laodao1.jpg">
+                <img src="img/tou99.jpg">
+                <img src="img/touxiang2.jpg">
+                <img src="img/tou66.jpg">
+                <img src="img/tou77.jpg">
+            </div>
+            <div class="chakan7-b">
+                <img src="img/tou88.jpg">
+                <img src="img/touxiang3.jpg">
+                <img src="img/touxiang4.jpg">
+                <img src="img/touxiang5.jpg">
+                <img src="img/touxiang6.gif">
+            </div>
+        </div>
+
+
+        <div class="chakan10">
+            <ul class="chakan10-ul">
+                <li>
+                    <router-link to="/sudu">速度榜</router-link>
+                </li>
+                <li>
+                    <router-link to="/renqi">人气榜</router-link>
+                </li>
+                <li>
+                    <router-link to="/caifu">财富榜</router-link>
+                </li>
+            </ul>
+        </div>
+
+
+        <router-view></router-view>
+
+        <div class="more more1">查看榜单更多</div>
+        <a href="supporterInfo.html" class="fangshi fangshi2">
+            <div>支持人数（6）</div>
+            <div class="hong">查看全部 > </div>
+        </a>
+
+
+        <a href="friendPay.html" class="friend">
+            帮好友众筹
+        </a>
+
+    </div>
+    <!-- end app -->
+
+
+    <template id="tmp1">
+        <div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n1.png" class="paiming">
+                    <img src="img/touxiang2.jpg">
+                    <span>夏天的风</span>
+                </div>
+                <div class="renshu">1分钟</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n2.png" class="paiming">
+                    <img src="img/touxiang3.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">4分钟</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n3.png" class="paiming">
+                    <img src="img/touxiang4.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">9分钟</div>
+            </div>
+
+
+        </div>
+    </template>
+
+
+    <!-- tmp2是人气榜单里面的内容 -->
+    <template id="tmp2">
+        <div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n1.png" class="paiming">
+                    <img src="img/tou77.jpg">
+                    <span>夏天的风</span>
+                </div>
+                <div class="renshu">124人</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n2.png" class="paiming">
+                    <img src="img/tou88.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">114人</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n3.png" class="paiming">
+                    <img src="img/tou99.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">999人</div>
+            </div>
+
+
+        </div>
+        </div>
+    </template>
+
+
+    <!-- tmp3是财富榜单里面的内容 -->
+    <template id="tmp3">
+        <div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n1.png" class="paiming">
+                    <img src="img/touxiang4.jpg">
+                    <span>夏天的风</span>
+                </div>
+                <div class="renshu">13999元</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n2.png" class="paiming">
+                    <img src="img/touxiang5.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">13999元</div>
+            </div>
+            <div class="lll">
+                <div class="llla">
+                    <img src="img/n3.png" class="paiming">
+                    <img src="img/tou88.jpg">
+                    <span>梦里见</span>
+                </div>
+                <div class="renshu">13999元</div>
+            </div>
+        </div>
+    </template>
+
+
+
+
+
+    <script>
+        var sudu = {
+            template: '#tmp1'
+        }
+        var renqi = {
+            template: '#tmp2'
+        }
+        var caifu = {
+            template: '#tmp3'
+        }
+
+        var router = new VueRouter({
+            routes: [
+                { path: '/', redirect: '/sudu' },
+                { path: '/sudu', component: sudu },
+                { path: '/renqi', component: renqi },
+                { path: '/caifu', component: caifu }
+
+            ]
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {
+
+            },
+            components: {
+
+            },
+            router
+        })
+    </script>
+</body>
+
+</html>

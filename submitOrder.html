@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筹款处理方式</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+    <link rel="stylesheet" href="lib/xiadan.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="xiadan1">
+            <div class="xiadan1-a">
+                <div class="xiadan1-a-1">
+                    新增个人信息<span class="hong">*</span>
+                </div>
+                <div class="xiadan1-a-2">请填写以便工作人员更好为您服务</div>
+            </div>
+            <div class="xiadan1-b">
+                <</div> </div> <div class="xiadan2">
+                    <span>选择队伍<span class="hong">*</span></span>
+                    <span>官方战队</span>
+            </div>
+            <div class="xiadan3">
+                <div class="xiadan3-1">挑战无人区|敦煌戈壁·丝绸之路</div>
+
+                <div class="xiadan3-2">
+                    <div class="aaa">
+                        <img src="img/fengmian.png" alt="">
+                    </div>
+                    <div class="bbb">
+                        <div>挑战无人区|中国敦煌戈壁站</div>
+                        <div class="juli2">2019.09.29-10.02</div>
+                        <div class="hong">13999元</div>
+                    </div>
+                </div>
+
+
+
+                <div class="xiadan3-3">
+                    <div class="xiadan3-3-a">购买数量</div>
+                    <div class="xiadan3-3-b">
+                        <ul id="list">
+                            <li v-for="item in myList">
+                                <div class="opo">
+                                    <div class="ppo">
+                                        <input type="button" value="-" @click="sub(item)"  class="btn1"/>
+                                        <span class="btn2" v-cloak >{{item.number}}</span>
+                                        <input type="button" value="+" @click="add(item)" class="btn3"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xiadan4">
+                    <div class="xiadan4-a">
+                        <div>代金券:</div>
+                        <div class="huizi">无代金券使用</div>
+                    </div>
+                    <div class="xiadan4-b">
+                        <div>基金抵扣</div>
+                        <div>-￥0 > </div>
+                    </div>
+                </div>
+                <div class="xiadan5">
+                    注：如果最终不参加该赛事，报名的金额可以用于其他赛事。不支持退款。提交订单即同意
+                    <a href="#">用户协议</a>
+                </div>
+                <div class="xiadan6">
+                    <div class="xiadan6-a">
+                        <div class="total">总价：{{total}}元</div>
+                    </div>
+                    <div class="xiadan6-b">
+                        提交订单
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end app -->
+
+
+
+
+        <script>
+            window.onload = function () {
+                var vm = new Vue({
+                    el: '#app',
+                    data: {
+                        myList: [
+
+                            {
+                                number: 0,
+                                price: 20
+                            }
+                        ],
+                        total: 0, //总价
+
+                    },
+                    methods: {
+                        //相减
+                        sub: function (item) {
+                            item.number--;
+                            if (item.number <= 0) {
+                                item.number = 0
+                            }
+                            this.count()
+                        },
+                        //相加
+                        add: function (item) {
+                            item.number++;
+                            this.count()
+                        },
+                        count: function () {
+                            var totalPrice = 0;//临时总价
+
+                            this.myList.forEach(function (val, index) {
+                                totalPrice += val.number * val.price;//累计总价
+                                //判断最大单价
+
+                            });
+                            this.total = parseFloat(totalPrice);
+                        }
+                    },
+                    created: function () {
+                        this.count();
+                    }
+                })
+            }
+        </script>
+</body>
+
+</html>

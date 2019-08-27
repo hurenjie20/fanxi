@@ -1,0 +1,240 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+}
+
+#app {
+    height: 800px;
+    background-color: #F3F3F3;
+}
+.xiadan1 {
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.xiadan1-a-1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.hong {
+    color: red;
+}
+
+.xiadan1-a-2 {
+    font-size: 16px;
+    color: #666666;
+
+}
+
+.xiadan1-b {
+    height: 50px;
+    line-height: 50px;
+}
+ 
+.xiadan2 {
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.xiadan3 {
+    height: 200px;
+    background-color: #fff;
+    margin-top: 10px;
+
+}
+
+.xiadan3-1 {
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+.xiadan3-2 {
+    height: 120px;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+}
+
+.aaa {
+    width: 20%;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.aaa img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.bbb {
+    width: 71%;
+    height: 100px;
+    margin: auto;
+    padding-left: 10px;
+}
+
+.juli2 {
+    margin: 2px 0 35px 0;
+}
+
+.xiadan3-3 {
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.xiadan4 {
+    height: 100px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.xiadan4-a {
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #F3F3F3;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.xiadan4-b {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.huizi {
+    color: #999999;
+}
+
+.xiadan5 {
+    padding: 20px;
+    font-size: 14px;
+    color: #141414;
+    margin-bottom: 190px;
+}
+
+.xiadan5 a {
+    color: #D9001B;
+}
+
+.xiadan6 {
+    height: 50px;
+    background-color: #fff;
+    position: relative;
+}
+
+.xiadan6-a {
+    height: 50px;
+    line-height: 50px;
+    width: 50%;
+    position: absolute;
+    right: 60px;
+    text-align: center;
+}
+
+.xiadan6-b {
+    height: 50px;
+    line-height: 50px;
+    width: 20%;
+    background-color: #D9001B;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+
+.total {
+    width: 200px;
+    height: 50px;
+}
+
+
+.opo {
+    height: 40px;
+    width: 90px;
+}
+
+.ppo {
+    height: 30px;
+    /* background-color: skyblue; */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.shuliang {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.btn1 {
+    outline: none;
+    border: transparent;
+    background-color: #fff;
+    height: 100%;
+    width: 23px;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    top: 0px;
+}
+
+.btn2 {
+    position: absolute;
+    left: 23px;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.btn3 {
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: transparent;
+    background-color: #fff;
+    height: 100%;
+    width: 23px;
+    border-left: 1px solid #ccc;
+}
+
+[v-cloak] {
+    display: none;
+}

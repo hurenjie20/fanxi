@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>众筹首页</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+    <link rel="stylesheet" href="lib/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <div class="return">
+                <img src="img/x1.png">
+            </div>
+            <div>
+                <div class="text">生命地图游学|一年一度,梅里雪山</div>
+                <div>勇者徒步之旅,再次集结!</div>
+            </div>
+            <div class="diandian">
+                <img src="img/x4.png" alt="">
+            </div>
+        </div>
+
+        <div class="myVido">视频区域</div>
+        <div class="box1">
+            <div class="price">
+                <div class="price11">
+                    <span class="price-1">￥13999</span>
+                    <span id="triangle-left"></span>
+                </div>
+                <div class="price-2" id="pointer">
+                    <span>距离众筹截至</span>
+                    <span>52天 12:04:20</span>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box2-1">&nbsp;&nbsp;挑战无人区|中国敦煌戈壁站2019.09.29-10.02</div>
+            <div class="box2-2">&nbsp;&nbsp;队伍名称：官方战队</div>
+        </div>
+
+        <div class="box3">
+            <div class="box3-1">
+                <img src="img/dun.png" class="dun">
+                本赛事由【陶冶户外】举办
+            </div>
+            <div class="box3-2">
+                <img src="img/t1.png" alt="">
+                <span>|</span>
+                <img src="img/t2.png" alt="">
+                <span>|</span>
+                <img src="img/t3.png" alt="">
+            </div>
+            <div class="box3-3">顶级战略投资，十万高净值人群的会外体验首选</div>
+        </div>
+        <div class="box4">
+            <ul class="box4-ul">
+                <li>
+                    <router-link to="/details">详情描述</router-link>
+                </li>
+                <li>
+                    <router-link to="/baoming">报名相关</router-link>
+                </li>
+                <li>
+                    <router-link to="/cansai">参赛标准</router-link>
+                </li>
+            </ul>
+        </div>
+
+
+        <router-view></router-view>
+
+        <div class="chakan">
+            <a href="check.html" class="chakan-1">查看众筹</a>
+        </div>
+        <div class="xxx">
+            <a href="iPay.html" class="xxx-1">我要自付</a>
+            <a href="bindingPhone.html" class="xxx-2">我要众筹</a>
+        </div>
+
+        <div class="kefu">
+            <a href="problemFeedback.html">
+
+                <img src="img/kefu.png">
+            </a>
+        </div>
+    </div>
+    <!-- end #app -->
+
+
+
+    <!-- tmp1是详情描述里面的内容 -->
+    <template id="tmp1">
+        <div class="xiangqing">
+            <div>
+                <div class="myVido2">视频区域</div>                
+            </div>
+            <div>
+                <img src="img/f1.png" class="xx">
+
+            </div>
+            <div>
+                <div class="myVido2">视频区域</div>
+                <img src="img/x2.jpg" class="xx">
+               
+                <div>
+                    <img src="img/xx.jpg" class="xx">
+                    <img src="img/xx2.jpg" class="xx">
+                    <img src="img/xx3.png" class="xx">
+
+                </div>
+                <div>
+                    <div class="myVido2">视频区域</div>
+                    <img src="img/xx4.jpg" class="xx">
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- tmp2是报名相关里面的内容 -->
+    <template id="tmp2">
+        <div>
+            <img src="img/xuzhi.jpg" class="xx">
+        </div>
+    </template>
+
+
+    <!-- tmp3是参赛标准里面的内容 -->
+    <template id="tmp3">
+        <div>
+            <img src="img/heihei.jpg" class="xx">
+        </div>
+    </template>
+
+
+    <script>
+        var details = {
+            template: '#tmp1'
+        }
+        var baoming = {
+            template: '#tmp2'
+        }
+        var cansai = {
+            template: '#tmp3'
+        }
+
+        var router = new VueRouter({
+            routes: [
+                { path: '/', redirect: '/details' },
+                { path: '/details', component: details },
+                { path: '/baoming', component: baoming },
+                { path: '/cansai', component: cansai }
+
+            ]
+        })
+
+
+
+
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {
+
+            },
+            components: {
+
+            },
+            router,
+
+            watch: {
+                '$route.path': function (newVal) {
+                    if (newVal === '/details') {
+                        console.log("hhh");
+                    } else if (newVal === '/baoming') {
+                        console.log("baoming");
+                    } else if (newVal === '/cansai') {
+                        console.log("cansai");
+                    }
+                }
+            }
+
+            // mounted() {
+
+            //     this.$router.afterEach((to, from, next) => {
+            //         window.scrollTo(0, 0)
+            //     })
+            // },
+
+
+
+        })
+    </script>
+</body>
+
+</html>

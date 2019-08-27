@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己支付</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+    <link rel="stylesheet" href="lib/pay.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <a href="index.html" class="return">
+                <img src="img/x3.png">
+                <div class="text">自己支付</div>
+            </a>
+            
+            <div class="diandian">
+                <img src="img/x4.png" alt="">
+            </div>
+        </div>
+
+        <div>
+            <ul class="pay1">
+                <li>
+                    <router-link to="/weixin">微信支付</router-link>
+                </li>
+                <span class="shuxian">|</span>
+                <li>
+                    <router-link to="/jijin">基金支付</router-link>
+                </li>
+                <span class="shuxian">|</span>
+                <li>
+                    <router-link to="/daijinquan">代金券支付</router-link>
+                </li>
+            </ul>
+        </div>
+
+        <router-view></router-view>
+
+    </div>
+    <!-- end app -->
+
+    <!-- tmp1是微信支付里面的内容 -->
+    <template id="tmp1">
+        <div>
+            <div class="kuang">
+                <div class="kuang1">输入金额（元）</div>
+                <div class="kuang2">
+                    ￥
+                    <input type="text">
+                </div>
+                <div class="kuang3">赛事最多可支付剩余金额 ： 9800元</div>
+            </div>
+            <div class="queren">确认付款</div>
+        </div>
+    </template>
+
+
+    <!-- tmp2是基金支付里面的内容 -->
+    <template id="tmp2">
+        <div>
+            <div class="kuang">
+                <div class="kuang1">输入金额（元）</div>
+                <div class="kuang2">
+                    ￥
+                    <input type="text" placeholder="最多可支持金额：0 ">
+                </div>
+                <div class="kuang3">可用基金金额 ： 0</div>
+            </div>
+            <div class="queren">确认付款</div>
+        </div>
+    </template>
+
+
+    <!-- tmp3是代金券支付里面的内容 -->
+    <template id="tmp3">
+        <div>
+            <div class="kuang">
+                <div class="kuang1">输入金额（元）</div>
+                <div class="kuang2">
+                    ￥
+                    <input type="text" placeholder="最多可支持金额：0 ">
+                </div>
+                <div class="kuang3">可用代金券金额 ： 0</div>
+            </div>
+            <div class="queren">确认付款</div>
+        </div>
+    </template>
+
+
+    <script>
+        var weixin = {
+            template: '#tmp1'
+        }
+        var jijin = {
+            template: '#tmp2'
+        }
+        var daijinquan = {
+            template: '#tmp3'
+        }
+
+        var router = new VueRouter({
+            routes: [
+                { path: '/', redirect: '/weixin' },
+                { path: '/weixin', component: weixin },
+                { path: '/jijin', component: jijin },
+                { path: '/daijinquan', component: daijinquan }
+
+            ]
+        })
+
+
+
+
+
+
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {
+
+            },
+            components: {
+
+            },
+            router
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+}
+li {
+    list-style: none;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+}
+.add {
+    box-sizing: border-box;
+    padding: 0 20px;
+    /* background-color: skyblue; */
+    width: 100%;
+}
+
+.person {
+    height: 600px;
+    background-color: #eee;
+}
+.top {
+    height: 35px;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.person1 {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    background-color: #fff;
+
+}
+
+.hong {
+    color: red;
+}
+
+.kuang8 {
+    margin-left: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+
+.kuang9 {
+    margin-left: 52px;
+}
+
+.person2 {
+    border-bottom: 20px solid #eee;
+}
+
+.person3 p {
+    color: red;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+.person4 {
+    width: 92%;
+    height: 40px;
+    line-height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    margin: 80px 20px;
+}

@@ -1,0 +1,314 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.top {
+    height: 42px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-bottom: 3px;
+}
+
+.myVido {
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    background-color: pink;
+    text-align: center;
+    margin-top: 62px;
+}
+
+.chakan2 {
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.hong {
+    color: red;
+}
+
+.chakan3 {
+    height: 120px;
+    border: 1px solid #7D7D7D;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.aaa {
+    width: 20%;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.aaa img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.bbb {
+    width: 71%;
+    height: 100px;
+    margin: auto;
+    padding-left: 30px;
+    color: #7D7D7D;
+}
+
+.juli2 {
+    margin: 2px 0 15px 0;
+}
+
+.chakan4 {
+    padding: 10px 20px;
+}
+
+.chakan5 {
+    height: 70px;
+    border: 1px solid #7D7D7D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.chakan5-a,
+.chakan5-b,
+.chakan5-c {
+    width: 140px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.juli3 {
+    margin-bottom: 5px;
+}
+
+.chakan6 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border: 1px solid #7D7D7D;
+    border-top: 0;
+}
+
+.chakan7 {
+    height: 140px;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+}
+
+.chakan7 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.chakan7-a,
+.chakan7-b {
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chakan8 {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border: 1px solid #7D7D7D;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+}
+
+.chakan9 {
+    border-top: 0;
+}
+
+.chakan10-ul {
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.chakan10-ul a {
+    text-decoration: none;
+    color: #000;
+}
+
+.lll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.llla {
+    height: 50px;
+    line-height: 50px;
+    /* background-color: pink; */
+    padding: 0 20px;
+}
+
+.llla img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+
+.renshu {
+    height: 50px;
+    line-height: 50px;
+    padding-right: 20px;
+    color: red;
+}
+
+.llla .paiming {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.more {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* background-color: pink; */
+    border: 1px solid #7D7D7D;
+    color: red;
+    margin-top: 10px;
+
+}
+
+.more1 {
+    margin-bottom: 20px;
+}
+
+
+.fangshi {
+    display: block;
+    padding: 0 20px;
+    margin-top: 10px;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    justify-content: space-between;
+    border: 1px solid #7D7D7D;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.fangshi2 {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.hhh {
+    height: 60px;
+    /* background-color: pink; */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #7D7D7D;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.h-1,
+.h-2 {
+    flex-direction: column;
+    /* background-color: pink; */
+    text-align: center;
+}
+
+.hhh img {
+    width: 28px;
+    height: 28px;
+    margin-top: 5px;
+}
+
+.help {
+    width: 35%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+}
+
+.fanye {
+    width: 40px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.friend {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #7D7D7D;
+    background-color: #fff;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+}
+
+/* .friendPay {
+    background-color: red;
+} */

@@ -1,0 +1,158 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.top {
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.chuli-a {
+    height: 100px;
+    background-color: #D9001B;
+    color: #fff;
+    text-align: center;
+}
+
+.chuli-a span {
+    display: block;
+}
+
+.chuli-a-span {
+    padding: 25px 0 6px 0;
+}
+
+.chuli-b {
+    height: 100px;
+    /* background-color: pink; */
+    border: 1px solid #7D7D7D;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.chuli-b-1 {
+    width: 90%;
+    /* background-color: pink; */
+    font-size: 15px;
+}
+
+.daxie {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.juli {
+    margin-bottom: 3px;
+}
+
+.chuli-b-2 {
+    width: 10%;
+    height: 100px;
+    line-height: 100px;
+    /* background-color: red; */
+}
+
+
+
+
+
+.queren {
+    height: 40px;
+    line-height: 40px;
+    width: 80%;
+    background-color: #D9001B;
+    color: #fff;
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center;
+
+}
+
+
+/* 单选框的样式 */
+.radio_type{
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    position: relative;
+}
+.radio_type:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #D9001B;
+}
+.radio_type:checked:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D9001B;
+    background:#D9001B;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.radio_type:checked:after{
+    content: '';
+    width: 10px;
+    height:5px;
+    border: 2px solid white;
+    border-top: transparent;
+    border-right: transparent;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left:5px;
+    vertical-align: middle;
+    transform: rotate(-45deg);
+}
+.radio_type:checked+label{
+    color: #b55959;
+}

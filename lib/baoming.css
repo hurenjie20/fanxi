@@ -1,0 +1,331 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #f7f6f5 !important;
+    font-size: 16px !important;
+
+}
+
+body input {
+    font-size: 16px;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.top {
+    height: 55px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.baoming1 {
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 55px;
+}
+
+.baoming2 {
+    height: 60px;
+    background-color: #fff;
+    padding: 8px 20px;
+
+}
+
+.baoming3 {
+    height: 160px;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.baoming3 div {
+    margin-bottom: 3px;
+}
+
+.baoming3 .da, .baoming4 .da{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.hong {
+    color: red;
+}
+
+.baoming4 {
+    height: 166px;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.baoming4 .btn {
+    padding: 10px;
+    width: 280px;
+    height: 50px;
+    background: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid #CCCCCC;
+    /* display: block; */
+    white-space: normal;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.baoming4 .isActive {
+    background: #dd4a4a;
+}
+
+.baoming5 {
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#app input {
+    height: 30px;
+    outline: none;
+    border: 1px solid transparent;
+    margin: auto;
+    margin-right: 0;
+    text-align: right;
+    font-size: 15px;
+}
+
+.baoming6 {
+    padding: 0 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.baoming6-a {
+    height: 50px;
+    line-height: 50px;
+    /* padding: 0 20px; */
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.huizi {
+    color: #777777;
+}
+
+.modalDiaLog {
+    width: 300px;
+    height: 110px;
+    position: fixed;
+    top: 220px;
+    background-color: pink;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 1002;
+    padding: 20px;
+}
+
+
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+.hei {
+    height: 30px;
+    /* display: block; */
+}
+
+.shenfen {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0;
+}
+
+.qubian {
+    border-bottom: 0;
+}
+
+.baoming7 {
+    height: 150px;
+    background-color: #fff;
+    padding: 0 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.baoming8 {
+    background-color: #fff;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.baoming9 {
+    height: 80px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.baoming9 .tianxie {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    /* background-color: pink; */
+    border: transparent;
+    text-align-last: left;
+    font-size: 14px !important;
+    /* background-color: red !important; */
+}
+
+.baoming10 {
+    height: 1050px;
+    background-color: #fff;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.baoming10-1 {
+    height: 99px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.baoming10-2 {
+    height: 75px;
+}
+.jianju {
+    padding-top: 20px;
+}
+
+.jianjuju {
+    padding-top: 10px;
+}
+
+.hhkk {
+    height: 200px;
+    padding: 0 20px;
+}
+
+.hk-1 {
+    height: 30px;
+    line-height: 30px;
+    /* background-color: pink; */
+    position: relative;
+}
+.tongyi {
+    display: inline-block;
+    font-size: 15px;
+    color: #777777;
+    position: absolute;
+    top: 0px;
+    left: 22px;
+}
+
+.hk-2 {
+    width: 95%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.radio_type {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
+
+
+
+/* 单选框的样式 */
+
+.tankuang1, .tankuang2, .tankuang3 {
+    height: 30px;
+    line-height: 30px;
+    /* background-color: pink; */
+    position: relative;
+    margin-bottom: 10px;
+    /* text-align: center; */
+}
+
+.llb {
+    /* background-color: red; */
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.last {
+    margin-bottom: 10px;
+}
+.else {
+    /* background-color: pink; */
+    margin-top: 20px;
+}
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绑定手机号页面</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+    <link rel="stylesheet" href="lib/addNumber.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <a href="index.html" class="return">
+                <img src="img/x3.png">
+                <div class="text">手机号绑定</div>
+            </a>
+
+            <div class="diandian">
+                <img src="img/x4.png" alt="">
+            </div>
+        </div>
+        <div class="add">
+
+
+            <div class="add1">
+                <div class="add1-1">为了数据安全和与APP数据互通</div>
+                <div>请您绑定手机号</div>
+            </div>
+            <div class="add2">
+                <quhao></quhao>
+                <div class="add2-1">
+                    <input type="tel" placeholder="请输入手机号" class="num1">
+
+                </div>
+                <div class="add2-1">
+                    <input type="text" placeholder="验证码" class="num1">
+                    <span class="num2">获取验证码 </span>
+                </div>
+
+
+            </div>
+            <div class="add3">
+                <a href="myInfo.html" class="add-ok">确认绑定</a>
+                <a href="#" class="wenhao">无法绑定成功？</a>
+            </div>
+        </div>
+
+    </div>
+    <!--国际区号-->
+    <template id="temp99">
+        <div id="quhao">
+            <div class="couns" v-show="!isShow" @click.stop="isShow=!isShow">
+                <span>{{ctr}}</span>
+                <span class="num2 num3">+86> </span>
+            </div>
+
+            <input class="couns" type="text" v-show="isShow" @click.stop="1324" placeholder="请选择区号" v-model="vmd"
+                @keyup="search" />
+            <ul v-show="isShow" id="search" name="phone">
+                <template v-if="quhao.length>0">
+                    <li v-for='n,index in quhao' :key='index' :class="n.quhaos"
+                        @click.stop="getQuhaos(n.quhaos+n.label)">{{n.label}} +{{n.quhaos}}</li>
+                </template>
+                <template v-else>
+                    <li>暂无数据</li>
+                </template>
+            </ul>
+        </div>
+
+    </template>
+
+
+
+
+    <script>
+        var quhao = {
+
+
+            data() {
+                return {
+                    isShow: false,
+                    ctr: '中国 (China)',
+                    vmd: '',
+                    quhao: [],
+                    arrs: [
+                        { label: "中国 (China)", quhaos: "86" },
+                        { label: "中国香港 (Hong Kong)", quhaos: "852" },
+                        { label: "中国澳門 (Macau)", quhaos: "853" },
+                        { label: "中国台湾 (Taiwan)", quhaos: "886" },
+                        { label: "日本 (Japan)", quhaos: "81" },
+                        { label: "韩国 (South Korea)", quhaos: "82" },
+                        { label: "美国 (USA or Canada)", quhaos: "1" },
+                        { label: "阿富汗 (Afghanistan)", quhaos: "93" },
+                        { label: "阿尔巴尼亚 (Albania)", quhaos: "355" },
+                        { label: "阿尔及利亚 (Algeria)", quhaos: "213" },
+                        { label: "萨摩亚 (American Samoa)", quhaos: "684" },
+                        { label: "安道尔共和国 (Andorra)", quhaos: "376" },
+                        { label: "安哥拉 (Angola)", quhaos: "244" },
+                        { label: "安圭拉岛 (Anguilla)", quhaos: "1264" },
+                        { label: "南极洲 (Antarctica)", quhaos: "672" },
+                        { label: "安提瓜和巴布达 (Antigua and Barbuda)", quhaos: "1268" },
+                        { label: "阿根廷 (Argentina)", quhaos: "54" },
+                        { label: "亚美尼亚 (Armenia)", quhaos: "374" },
+                        { label: "阿鲁巴 (Aruba)", quhaos: "297" },
+                        { label: "澳大利亚 (Australia)", quhaos: "61" },
+                        { label: "奥地利 (Austria)", quhaos: "43" },
+                        { label: "阿塞拜疆 (Azerbaijan)", quhaos: "994" },
+                        { label: "巴哈马 (Bahamas)", quhaos: "1242" },
+                        { label: "巴林 (Bahrain)", quhaos: "973" },
+                        { label: "孟加拉国 (Bangladesh)", quhaos: "880" },
+                        { label: "巴巴多斯 (Barbados)", quhaos: "1246" },
+                        { label: "白俄罗斯 (Belarus)", quhaos: "375" },
+                        { label: "比利时 (Belgium)", quhaos: "32" },
+                        { label: "伯利兹城 (Belize)", quhaos: "501" },
+                        { label: "贝宁 (Benin)", quhaos: "229" },
+                        { label: "百慕大 (Bermuda)", quhaos: "1441" },
+                        { label: "不丹 (Bhutan)", quhaos: "975" },
+                        { label: "玻利维亚 (Bolivia)", quhaos: "591" },
+                        { label: "波斯尼亚和黑塞哥维那 (Bosnia and Herzegovina)", quhaos: "387" },
+                        { label: "博茨瓦纳 (Botswana)", quhaos: "267" },
+                        { label: "巴西 (Brazil)", quhaos: "55" },
+                        { label: "英属印度洋领地 (British Indian Ocean Territory)", quhaos: "246" },
+                        { label: "文莱达鲁萨兰国 (Brunei Darussalam)", quhaos: "673" },
+                        { label: "保加利亚 (Bulgaria)", quhaos: "359" },
+                        { label: "布基纳法索 (Burkina Faso)", quhaos: "226" },
+                        { label: "布隆迪 (Burundi)", quhaos: "257" },
+                        { label: "柬埔寨 (Cambodia)", quhaos: "855" },
+                        { label: "喀麦隆 (Cameroon)", quhaos: "237" },
+                        { label: "佛得角 (Cape Verde)", quhaos: "238" },
+                        { label: "开曼群岛 (Cayman Islands)", quhaos: "1345" },
+                        { label: "中非共和国 (Central African Republic)", quhaos: "236" },
+                        { label: "乍得 (Chad)", quhaos: "235" },
+                        { label: "智利 (Chile)", quhaos: "56" },
+                        { label: "圣延岛 (Christmas Island)", quhaos: "61" },
+                        { label: "科科斯群岛 (Cocos (Keeling) Islands)", quhaos: "61" },
+                        { label: "哥伦比亚(Colombia)", quhaos: "57" },
+                        { label: "科摩罗 (Comoros)", quhaos: "269" },
+                        { label: "刚果 (Congo)", quhaos: "242" },
+                        { label: "刚果民主共和国(Congo,The Democratic Republic Of The)", quhaos: "243" },
+                        { label: "库克群岛 (Cook Islands)", quhaos: "682" },
+                        { label: "哥斯达黎加 (Costa Rica)", quhaos: "506" },
+                        { label: "科特迪瓦 (Cote D Ivoire)", quhaos: "225" },
+                        { label: "克罗地亚 (Croatia)", quhaos: "385" },
+                        { label: "古巴 (Cuba)", quhaos: "53" },
+                        { label: "塞浦路斯 (Cyprus)", quhaos: "357" },
+                        { label: "捷克 (Czech Republic)", quhaos: "420" },
+                        { label: "丹麦 (Denmark)", quhaos: "45" },
+                        { label: "吉布提 (Djibouti)", quhaos: "253" },
+                        { label: "多米尼克国 (Dominica)", quhaos: "1767" },
+                        { label: "多米尼加共和国 (Dominican Republic)", quhaos: "1849" },
+                        { label: "东帝汶 (East Timor)", quhaos: "670" },
+                        { label: "厄瓜多尔 (Ecuador)", quhaos: "593" },
+                        { label: "埃及 (Egypt)", quhaos: "20" },
+                        { label: "萨尔瓦多 (El Salvador)", quhaos: "503" },
+                        { label: "赤道几内亚 (Equatorial Guinea)", quhaos: "240" },
+                        { label: "圣卢西亚岛 (Santa Luzia Island)", quhaos: "1758" },
+                        { label: "圣文森特和格林纳丁斯(Saint Vincent and the Grenadines)", quhaos: "1784" },
+                        { label: "圣多美和普林西比 (Sao Tome and Principe)", quhaos: "239" },
+                        { label: "南苏丹共和国 (The Republic of South Sudan)", quhaos: "211" }
+                    ]
+                }
+            },
+            methods: {
+                getSrcList() {
+                    this.isShow = false;
+                    this.vmd = '';
+                    this.quhao = this.arrs
+                },
+                //			改变时获取区号和国籍
+                getQuhaos: function (e) {
+                    this.quhao = this.arrs
+                    this.ctr = e.replace(/[0-9]/ig, "");//正则匹配
+                    this.isShow = false;
+                    this.$emit('goTo', e)//向父组件传值
+                },
+                //			键盘事件
+                search: function () {
+                    this.quhao = [];//清空渲染的国籍数组
+                    var country = '';//国籍
+                    var num = '';//区号
+                    for (var keys in this.arrs) {
+                        country = this.arrs[keys].label.toUpperCase();
+                        num = this.arrs[keys].quhaos;
+                        if (country.indexOf(this.vmd.toUpperCase()) != -1 || num.indexOf(this.vmd) != -1) {//判断输入的值跟区号和国家是否匹配
+                            this.quhao.push(this.arrs[keys])//匹配合适时往渲染的国籍数组添加
+                        }
+                    }
+                }
+            },
+            created() {
+                this.quhao = this.arrs//渲染的国籍数组初始化
+            },
+            mounted() {
+                window.addEventListener('click', this.getSrcList)//添加监听事件
+            },
+            template: '#temp99'
+        }
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {
+
+            },
+            components: {
+                quhao
+            },
+
+        })
+    </script>
+</body>
+
+</html>

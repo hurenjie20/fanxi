@@ -1,0 +1,163 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #eee;
+}
+
+body a {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.pay1 {
+    height: 50px;
+    line-height: 50px;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.router-link-active {
+    display: inline-block;
+    height: 49px;
+    color: red !important;
+    border-bottom: 2px solid red !important;
+}
+
+.pay1 li {
+    width: 33.3%;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pay1 a {
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.shuxian {
+    font-size: 20px;
+    color: #ccc;
+}
+
+
+.kuang {
+    height: 200px;
+    background-color: #fff;
+}
+
+.kuang1 {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+.kuang2 {
+    height: 90px;
+    line-height: 90px;
+    /* background-color: skyblue; */
+    font-size: 22px;
+    padding: 0 20px;
+}
+
+.kuang2 input {
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid transparent;
+}
+
+.kuang3 {
+    height: 48px;
+    line-height: 48px;
+    border-top: 1px solid #ccc;
+    margin: 0 20px;
+}
+
+.queren {
+    height: 40px;
+    line-height: 40px;
+    width: 80%;
+    background-color: #D9001B;
+    color: #fff;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: center;
+
+}
+
+.top {
+    height: 35px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.weixin {
+    height: 40px;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    /* border-top: 1px solid #ccc; */
+}
+
+.weixin img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.sfont {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.w_right {
+    margin-left: 40px;
+    line-height: 40px;
+}
+
+.kuang0 {
+    border-bottom: 1px solid #ccc !important;
+}

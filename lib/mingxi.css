@@ -1,0 +1,69 @@
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.top {
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.return {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.mingxi-1 {
+    height: 45px;
+    line-height: 45px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.mingxi-2-a {
+    padding: 7px 20px;
+    height: 45px;
+    line-height: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mingxi-2 img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+    
+}
